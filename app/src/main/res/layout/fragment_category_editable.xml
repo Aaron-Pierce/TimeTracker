@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/now_tracking_border"
+            android:clickable="true"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/categoryLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditText
+                android:fontFamily="sans-serif"
+                android:textFontWeight="200"
+                android:hint="Category Name"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:outlineAmbientShadowColor="#111111"
+                android:backgroundTint="#111111"
+                android:textCursorDrawable="@null"
+                android:id="@+id/categoryLabelInput"
+                android:inputType="textCapSentences"
+                android:layout_width="250dp"
+        >
+                <requestFocus/>
+        </EditText>
+
+
+        <TextView
+                android:text="ADD"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="100"
+                android:layout_gravity="right|center"
+                android:layout_rowSpan="3"
+                android:textAllCaps="true"
+                android:background="@drawable/now_tracking_border"
+                android:id="@+id/confirmAddedCategoryButton"
+
+        />
+        <EditText
+                android:fontFamily="sans-serif"
+                android:textFontWeight="200"
+                android:hint="Category Description"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:outlineAmbientShadowColor="#111111"
+                android:backgroundTint="#111111"
+                android:textCursorDrawable="@null"
+                android:id="@+id/categoryDescriptionInput"
+                android:inputType="textCapSentences"
+                android:layout_width="250dp"
+        />
+        <EditText
+                android:fontFamily="sans-serif"
+                android:textFontWeight="200"
+                android:hint="Color - does nothing rn"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:outlineAmbientShadowColor="#111111"
+                android:backgroundTint="#111111"
+                android:textCursorDrawable="@null"
+                android:id="@+id/categoryColorInput"
+                android:inputType="textCapSentences"
+                android:layout_width="250dp"
+        />
+
+    </GridLayout>

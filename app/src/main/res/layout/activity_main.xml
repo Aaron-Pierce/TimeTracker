@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.viewpager2.widget.ViewPager2
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/mainViewPager"
+        android:overScrollMode="never"
+        android:fadingEdge="none"
+/>
+
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content"-->
+<!--                                                  android:layout_height="wrap_content"-->
+<!--                                                  android:orientation="vertical"-->
+<!--                                                  android:layout_gravity="center"-->
+<!--    >-->
+<!--        <TextView android:id="@+id/mainHeader"-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="@string/app_name"-->
+<!--                  android:fontFamily="sans-serif"-->
+<!--                  android:textFontWeight="200"-->
+<!--                  android:textSize="45sp"-->
+<!--                  android:layout_marginTop="15dp"-->
+<!--                  android:textAllCaps="true"-->
+<!--        />-->
+<!--        <TextView android:layout_width="wrap_content"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="Now Running:"-->
+<!--                  android:layout_marginTop="30dp"-->
+<!--                  android:fontFamily="sans-serif"-->
+<!--                  android:textFontWeight="300"-->
+<!--                  android:textAllCaps="true"-->
+<!--        />-->
+
+<!--        <GridLayout android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:background="@drawable/now_tracking_border"-->
+<!--                    android:rowCount="2"-->
+<!--                    android:columnCount="2"-->
+<!--                    android:useDefaultMargins="true"-->
+<!--        >-->
+<!--            <TextView-->
+<!--                    android:text="Tracker Label"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:textFontWeight="400"-->
+<!--                    android:width="200dp"-->
+<!--            />-->
+<!--            <TextView-->
+<!--                    android:text="00:00:00"-->
+<!--                    android:textSize="30sp"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:textFontWeight="400"-->
+<!--                    android:layout_gravity="top"-->
+<!--                    android:layout_marginTop="-0dp"-->
+
+<!--            />-->
+
+<!--            <TextView-->
+<!--                    android:text="Descriptor Text"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_columnSpan="2"-->
+<!--            />-->
+
+<!--            <TextView-->
+<!--                    android:text="Start"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_columnSpan="2"-->
+<!--                    android:layout_gravity="right"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:textFontWeight="300"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:clickable="true"-->
+<!--                    android:onClick="toggleActiveTimer"-->
+<!--                    android:id="@+id/toggleActiveTimerLink"-->
+<!--            />-->
+<!--        </GridLayout>-->
+
+<!--        <LinearLayout android:layout_width="match_parent"-->
+<!--                      android:layout_height="wrap_content"-->
+<!--                      android:layout_marginTop="50dp"-->
+<!--                      android:orientation="vertical"-->
+<!--        >-->
+<!--            <TextView android:text="Quick start timers:"-->
+<!--                      android:textAllCaps="true" android:layout_height="wrap_content"-->
+<!--                      android:layout_width="wrap_content"-->
+<!--            />-->
+<!--            <GridLayout android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/now_tracking_border"-->
+<!--                        android:clickable="true"-->
+<!--                        android:onClick="quickStart1"-->
+<!--                        android:columnCount="2"-->
+<!--                        android:rowCount="2"-->
+<!--                        android:useDefaultMargins="true"-->
+
+<!--            >-->
+<!--                <TextView-->
+<!--                        android:text="Quick Timer 1"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:layout_gravity="top"-->
+<!--                />-->
+
+
+<!--                <TextView-->
+<!--                        android:text="00:00:00"-->
+<!--                        android:textSize="25sp"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textFontWeight="300"-->
+<!--                        android:layout_gravity="right|center"-->
+<!--                        android:layout_rowSpan="2"-->
+
+<!--                />-->
+<!--                <TextView-->
+<!--                        android:text="Timer Description"-->
+<!--                        android:layout_gravity="start"-->
+<!--                />-->
+<!--            </GridLayout>-->
+
+<!--            <GridLayout android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/now_tracking_border"-->
+<!--                        android:clickable="true"-->
+<!--                        android:onClick="quickStart2"-->
+<!--                        android:columnCount="2"-->
+<!--                        android:rowCount="2"-->
+<!--                        android:useDefaultMargins="true"-->
+<!--                        android:layout_marginTop="10dp"-->
+
+<!--            >-->
+<!--                <TextView-->
+<!--                        android:text="Quick Timer 2"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:layout_gravity="top"-->
+<!--                />-->
+
+
+<!--                <TextView-->
+<!--                        android:text="00:00:00"-->
+<!--                        android:textSize="25sp"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textFontWeight="300"-->
+<!--                        android:layout_gravity="right|center"-->
+<!--                        android:layout_rowSpan="2"-->
+
+<!--                />-->
+<!--                <TextView-->
+<!--                        android:text="Timer Description"-->
+<!--                        android:layout_gravity="start"-->
+<!--                />-->
+<!--            </GridLayout>-->
+
+<!--            <GridLayout android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/now_tracking_border"-->
+<!--                        android:clickable="true"-->
+<!--                        android:onClick="quickStart3"-->
+<!--                        android:columnCount="2"-->
+<!--                        android:rowCount="2"-->
+<!--                        android:useDefaultMargins="true"-->
+<!--                        android:layout_marginTop="10dp"-->
+
+<!--            >-->
+<!--                <TextView-->
+<!--                        android:text="Quick Timer 3"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:layout_gravity="top"-->
+<!--                />-->
+
+
+<!--                <TextView-->
+<!--                        android:text="00:00:00"-->
+<!--                        android:textSize="25sp"-->
+<!--                        android:fontFamily="sans-serif"-->
+<!--                        android:textFontWeight="300"-->
+<!--                        android:layout_gravity="right|center"-->
+<!--                        android:layout_rowSpan="2"-->
+
+<!--                />-->
+<!--                <TextView-->
+<!--                        android:text="Timer Description"-->
+<!--                        android:layout_gravity="start"-->
+<!--                />-->
+<!--            </GridLayout>-->
+
+<!--            <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="right"-->
+<!--                    android:text="See all"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:id="@+id/seeAllTimersLink"-->
+<!--                    android:clickable="true"-->
+<!--                    android:onClick="showAllTimers"-->
+<!--            />-->
+<!--        </LinearLayout>-->
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->

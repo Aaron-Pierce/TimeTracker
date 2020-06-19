@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:overScrollMode="never"
+>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:orientation="vertical"
+                                                  android:layout_gravity="bottom"
+                                                  android:id="@+id/linearLayoutCompat"
+
+                                                  app:layout_constraintStart_toStartOf="parent"
+                                                  app:layout_constraintEnd_toEndOf="parent"
+
+                                                  app:layout_constraintTop_toTopOf="parent"
+                                                  android:layout_marginTop="50dp"
+
+    >
+        <TextView android:id="@+id/mainHeader"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Reports"
+                  android:fontFamily="sans-serif"
+                  android:textFontWeight="200"
+                  android:textSize="45sp"
+                  android:layout_marginTop="15dp"
+                  android:textAllCaps="true"
+        />
+
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:overScrollMode="ifContentScrolls"
+        >
+            <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content" android:scrollbars="none"
+                                                   android:paddingBottom="30dp">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:id="@+id/timersListViewWrapper"
+                              android:overScrollMode="ifContentScrolls"
+                >
+                    <View
+                            android:layout_width="350dp"
+                            android:layout_height="1dp"
+                            android:background="#909090"
+                            android:layout_marginBottom="10dp"
+                    />
+
+                    <GridLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                android:rowCount="1"
+                                android:columnCount="2"
+                    >
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                                      android:orientation="vertical">
+
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="TODAY"
+                                      android:textAllCaps="true"
+                                      android:fontFamily="sans-serif"
+                                      android:textFontWeight="100"
+                                      android:textSize="35sp"
+                            />
+
+                            <LinearLayout android:layout_width="175dp"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="horizontal"
+                                          android:id="@+id/timersListView"
+                                          android:overScrollMode="ifContentScrolls"
+                            >
+                                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                                              android:orientation="vertical" android:paddingRight="5dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:text="5am" android:paddingTop="0dp" android:layout_gravity="right"
+                                              android:fontFamily="sans-serif" android:textFontWeight="100"/>
+                                    <View android:layout_width="1dp" android:layout_height="0dp"
+                                          android:layout_weight="1"/>
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:text="10pm" android:fontFamily="sans-serif"
+                                              android:textFontWeight="100"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="10dp" android:layout_height="510dp"
+                                              android:orientation="vertical"
+                                              android:background="@drawable/now_tracking_border" android:padding="0dp"
+                                              android:id="@+id/dayReportBarLayout">
+                                    <View android:layout_width="match_parent" android:layout_height="100dp"
+                                          android:background="@color/colorAccent"/>
+                                    <View android:layout_width="match_parent" android:layout_height="100dp"
+                                          android:background="#ee44aa"/>
+                                    <View android:layout_width="match_parent" android:layout_height="100dp"
+                                          android:background="#00000000"/>
+                                    <View android:layout_width="match_parent" android:layout_height="100dp"
+                                          android:background="#aabbccdd"/>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/todayTimelineLabels"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="2dp"
+                                >
+                                    <TextView android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content"
+                                              android:text="Labels"
+                                              android:fontFamily="sans-serif"
+                                              android:textFontWeight="100"
+                                              android:textSize="15sp"
+                                    />
+                                </RelativeLayout>
+                                <!--                        <LinearLayout android:layout_width="10dp" android:layout_height="match_parent" android:orientation="vertical">-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#000000"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#770000"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#007700"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#000077"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#11ee11"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#55cc22"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#aa5511"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#009911"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#110011"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#ffee11"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#225599"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#115522"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#998877"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#008866"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#11ffbb"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#11aabb"/>-->
+                                <!--                            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#8899cc"/>-->
+                                <!--                        </LinearLayout>-->
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:text="This Week"
+                                      android:fontFamily="sans-serif"
+                                      android:textFontWeight="100"
+                                      android:textSize="35sp"
+                                      />
+                        </LinearLayout>
+                    </GridLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--            android:id="@+id/fab"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="end"-->
+    <!--            android:src="@drawable/fab"-->
+    <!--            android:contentDescription="+"-->
+    <!--            android:backgroundTint="#eeeeee"-->
+    <!--            android:backgroundTintMode="screen"-->
+    <!--            app:borderWidth="0dp"-->
+    <!--            android:layout_margin="16dp" app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

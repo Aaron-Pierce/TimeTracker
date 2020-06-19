@@ -1,0 +1,131 @@
+<LinearLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="500dp"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:orientation="vertical"
+>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Edit Timer:"
+              android:fontFamily="sans-serif"
+              android:textSize="35sp"
+              android:textFontWeight="200"
+              android:textAllCaps="true"
+    />
+
+    <View
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:background="#909090"
+            android:layout_marginTop="5dp"
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+    >
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif"
+                  android:textAllCaps="true"
+                  android:text="Set timer start:"
+        />
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      >
+        <TimePicker android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginRight="-40dp"
+                    android:layout_marginTop="-30dp"
+                    android:paddingTop="-50dp"
+                    android:background="@drawable/now_tracking_border"
+                    android:id="@+id/timerStart"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="right"
+                  android:text="@string/setToEndOfLastTimer"
+                  android:fontFamily="sans-serif"
+                  android:textFontWeight="100"
+                  android:layout_marginTop="-35dp"
+                  android:textAllCaps="true"
+                  android:clickable="true"
+                  android:id="@+id/setToEndOfLastTimerButton"
+        />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif"
+                  android:textAllCaps="true"
+                  android:text="Set timer End:"
+                  android:layout_marginTop="0dp"
+        />
+        <TimePicker android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginRight="-40dp"
+                    android:layout_marginTop="-30dp"
+                    android:paddingTop="-50dp"
+                    android:background="@drawable/now_tracking_border"
+                    android:id="@+id/timerEnd"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="OR"
+                  android:fontFamily="sans-serif"
+                  android:textAllCaps="true"
+                  android:textFontWeight="200"
+                  android:textSize="20sp"
+                  android:layout_marginTop="-10dp"
+
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="It should have lasted for"
+                  android:fontFamily="sans-serif"
+                  android:textAllCaps="true"
+                  android:layout_marginTop="20dp"
+        />
+
+        <EditText android:layout_width="175dp"
+                  android:layout_height="wrap_content"
+                  android:inputType="time"
+                  android:hint="HH:MM:SS"
+                  android:fontFamily="sans-serif"
+                  android:textFontWeight="300"
+                  android:layout_marginLeft="5dp"
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="SAVE"
+                  android:textAllCaps="true"
+                  android:fontFamily="sans-serif"
+                  android:textSize="20sp"
+                  android:textFontWeight="200"
+                  android:background="@drawable/now_tracking_border"
+                  android:layout_gravity="right"
+                  android:layout_marginRight="3dp"
+                  android:layout_marginBottom="3dp"
+                  android:layout_marginTop="15dp"
+                  android:clickable="true"
+                  android:id="@+id/saveTimerEdits"
+        />
+    </LinearLayout>
+
+    
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/now_tracking_border"
+            android:clickable="true"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/categoryLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+                android:text="Quick Timer 1"
+                android:fontFamily="sans-serif"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:id="@+id/categoryLabel"
+        />
+
+
+        <TextView
+                android:text=""
+                android:textSize="25sp"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="100"
+                android:layout_gravity="right|center"
+                android:layout_rowSpan="2"
+                android:textAllCaps="true"
+                android:id="@+id/categorySelectedIndicator"
+
+        />
+        <TextView
+                android:text="Timer Description"
+                android:layout_gravity="start"
+                android:id="@+id/categoryDescription"
+        />
+    </GridLayout>

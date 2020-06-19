@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="5dp"
+        android:orientation="vertical"
+
+        android:overScrollMode="never"
+>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:orientation="vertical"
+                                                  android:layout_gravity="center"
+                                                  android:id="@+id/linearLayoutCompat"
+
+                                                  app:layout_constraintStart_toStartOf="parent"
+                                                  app:layout_constraintEnd_toEndOf="parent"
+                                                  app:layout_constraintTop_toTopOf="parent"
+    >
+        <TextView android:id="@+id/mainHeader"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/app_name"
+                  android:fontFamily="sans-serif"
+                  android:textFontWeight="200"
+                  android:textSize="45sp"
+                  android:layout_marginTop="15dp"
+                  android:textAllCaps="true"
+                  android:clickable="true"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Now Running:"
+                  android:layout_marginTop="30dp"
+                  android:fontFamily="sans-serif"
+                  android:textFontWeight="300"
+                  android:textAllCaps="true"
+        />
+
+        <GridLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/now_tracking_border"
+                    android:rowCount="2"
+                    android:columnCount="2"
+                    android:useDefaultMargins="true"
+                    android:id="@+id/activeTimerLayout"
+        >
+            <TextView
+                    android:text="Default timer"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif"
+                    android:textFontWeight="400"
+                    android:width="200dp"
+                    android:id="@+id/activeTimerLabel"
+            />
+            <TextView
+                    android:text="00:00:00"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif"
+                    android:textFontWeight="400"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="-0dp"
+                    android:id="@+id/activeTimerTimeElapsed"
+
+            />
+
+            <TextView
+                    android:text="Swipe right to begin a timer"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/activeTimerDescription"
+            />
+
+
+            <LinearLayout
+                    android:layout_width="321dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+            >
+
+                <TextView
+                        android:text="Edit"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:fontFamily="sans-serif"
+                        android:textFontWeight="300"
+                        android:textAllCaps="true"
+                        android:clickable="true"
+                        android:id="@+id/editActiveTimerLink"
+                        android:layout_height="wrap_content"/>
+
+                <View android:layout_width="0dp"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                />
+
+                <TextView
+                        android:text="Start"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif"
+                        android:textFontWeight="300"
+                        android:textAllCaps="true"
+                        android:clickable="true"
+                        android:id="@+id/toggleActiveTimerLink"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </GridLayout>
+
+        <androidx.fragment.app.FragmentContainerView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  tools:layout="@layout/fragment_category_list"
+                  android:id="@+id/fragmentCategoryList"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

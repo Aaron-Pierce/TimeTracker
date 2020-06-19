@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/now_tracking_border"
+            android:clickable="true"
+            android:onClick="quickStart1"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:id="@+id/timerListTimerFragment"
+            android:layout_marginBottom="10dp"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+                android:text="Quick timer 1"
+                android:fontFamily="sans-serif"
+                android:textSize="20dp"
+                android:layout_gravity="top"
+                android:id="@+id/timerTitle"
+
+
+        />
+
+
+        <TextView
+                android:text="00:00:00"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="300"
+                android:layout_gravity="right|center"
+                android:layout_rowSpan="2"
+                android:id="@+id/timerTimeElapsed"
+
+        />
+        <TextView
+                android:text="Smaller description"
+                android:layout_gravity="start"
+                android:maxWidth="150dp"
+                android:maxHeight="50dp"
+                android:id="@+id/timerDescription"
+        />
+    </GridLayout>
