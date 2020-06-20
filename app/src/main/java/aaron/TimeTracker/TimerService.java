@@ -193,8 +193,6 @@ public class TimerService extends Service {
         registerReceiver(syncingCategoryRequestReceiver, syncingCategoryRequestReceiverFilter);
 
         bindToTimer();
-
-
         return super.onStartCommand(intent, flags, startId);
     }
 

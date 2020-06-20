@@ -4,11 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
 
 public class DeveloperSheetFragment extends BottomSheetDialogFragment {
     MainFragment mainFragment;
@@ -32,6 +36,25 @@ public class DeveloperSheetFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 mainFragment.activeTimer.secondsElapsed = 120 * 60 + 1;
+            }
+        });
+
+        Button clearCommitedTimesButton = view.findViewById(R.id.clearCommitedTimesButton);
+        clearCommitedTimesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(Category c : CategoryManager.categories){
+                    CommitedTimeCollection toBuild = new CommitedTimeCollection();
+                    for(CommittedTime t : c.committedTimes){
+                        LocalDate d = LocalDate.from(t.date.toInstant().atZone(ZoneId.systemDefault()));
+                        LocalDate now = LocalDate.now();
+                        if(!d.isEqual(now)){
+                            toBuild.add(t);
+                        }
+                    }
+
+                    c.committedTimes = toBuild;
+                }
             }
         });
     }
