@@ -82,33 +82,7 @@
                     android:background="@drawable/now_tracking_border"
                     android:id="@+id/timerEnd"
         />
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="OR"
-                  android:fontFamily="sans-serif"
-                  android:textAllCaps="true"
-                  android:textFontWeight="200"
-                  android:textSize="20sp"
-                  android:layout_marginTop="-10dp"
 
-        />
-
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="It should have lasted for"
-                  android:fontFamily="sans-serif"
-                  android:textAllCaps="true"
-                  android:layout_marginTop="20dp"
-        />
-
-        <EditText android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:inputType="time"
-                  android:hint="HH:MM:SS"
-                  android:fontFamily="sans-serif"
-                  android:textFontWeight="300"
-                  android:layout_marginLeft="5dp"
-        />
 
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"

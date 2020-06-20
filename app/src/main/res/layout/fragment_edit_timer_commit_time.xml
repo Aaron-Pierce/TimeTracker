@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="200dp"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:orientation="vertical"
+                                              android:padding="20dp"
+>
+<TextView android:layout_width="350dp"
+          android:layout_height="wrap_content"
+          android:text="Commit Time"
+          android:fontFamily="sans-serif"
+          android:textFontWeight="200"
+          android:textSize="35sp"
+          android:layout_marginTop="15dp"
+/>
+
+    <androidx.fragment.app.FragmentContainerView android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 tools:layout="@layout/fragment_category_list"
+                                                 android:id="@+id/fragmentCategoryListCommitTimePopup"
+    />
+</androidx.appcompat.widget.LinearLayoutCompat>

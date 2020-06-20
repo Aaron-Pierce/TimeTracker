@@ -92,4 +92,11 @@ public class CategoryManager {
             }
         }
     }
+
+    public static Category tryToFindActiveCategory() {
+        for(Category c : categories){
+            if(c.selected) return c;
+        }
+        return null;
+    }
 }

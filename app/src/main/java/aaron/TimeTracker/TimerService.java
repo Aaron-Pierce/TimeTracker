@@ -178,6 +178,20 @@ public class TimerService extends Service {
         IntentFilter syncingTickRequestFilter = new IntentFilter("REQUEST_SYNCING_TICK");
         registerReceiver(syncingTickRequestReceiver, syncingTickRequestFilter);
 
+
+        BroadcastReceiver syncingCategoryRequestReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if(activeCategory != null) {
+                    Intent sync_active_category = new Intent("SYNC_ACTIVE_CATEGORY");
+                    sync_active_category.putExtra("categoryId", activeCategory.getId() + "");
+                    getApplication().sendBroadcast(sync_active_category);
+                }
+            }
+        };
+        IntentFilter syncingCategoryRequestReceiverFilter = new IntentFilter("REQUEST_ACTIVE_CATEGORY");
+        registerReceiver(syncingCategoryRequestReceiver, syncingCategoryRequestReceiverFilter);
+
         bindToTimer();
 
 

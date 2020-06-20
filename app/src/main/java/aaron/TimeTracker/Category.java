@@ -1,6 +1,7 @@
 package aaron.TimeTracker;
 
 import android.graphics.Color;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.Serializable;
@@ -49,6 +50,16 @@ public class Category implements Serializable {
         if(time == 0) return;
         System.out.println("Committing time with id " + getId());
         committedTimes.add(new CommittedTime(getId(), time));
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Category{id: " + getId() + ", name:" + this.name +"}";
+    }
+
+    public void commitTime(CommittedTime committedTime){
+        committedTimes.add(committedTime);
     }
 
     @Override

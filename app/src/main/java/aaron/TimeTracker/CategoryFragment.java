@@ -43,6 +43,7 @@ public class CategoryFragment extends Fragment {
                 System.out.println("Selected");
                 TextView categorySelectedIndicator = view.findViewById(R.id.categorySelectedIndicator);
                 categorySelectedIndicator.setText((justActivated) ? "SELECTED" : "");
+                System.out.println("category.selected = " + justActivated + " for category " + category.name);
                 category.selected = justActivated;
                 justActivated = false;
             }
